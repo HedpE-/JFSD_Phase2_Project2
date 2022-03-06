@@ -24,7 +24,6 @@ public class BookFlightServlet extends HttpServlet {
      */
     public BookFlightServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**

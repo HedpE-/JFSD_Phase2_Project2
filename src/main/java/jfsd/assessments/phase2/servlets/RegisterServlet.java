@@ -17,17 +17,22 @@ import jfsd.assessments.phase2.entity.User;
 import jfsd.assessments.phase2.util.CrudHelper;
 
 /**
- * Servlet implementation class Register
+ * Servlet implementation class RegisterServlet
  */
 @WebServlet("/register")
 public class RegisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+    
+	 /**
+	  * @see HttpServlet#HttpServlet()
+	  */
+	 public RegisterServlet() {
+	     super();
+	 }
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String redirect = request.getParameter("redirect");
 		String fname=request.getParameter("fname");

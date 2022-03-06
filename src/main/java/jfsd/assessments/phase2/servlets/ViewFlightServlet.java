@@ -37,7 +37,6 @@ public class ViewFlightServlet extends HttpServlet {
 		session.setAttribute("currentFlight", flight);
 		
 		response.sendRedirect("flightDetails.jsp");
-//        RequestDispatcher rd = request.g*
 	}
 
 }

@@ -36,7 +36,6 @@ public class HibernateUtility {
 				String hbm2ddl = props.getProperty("hibernate.hbm2ddl.auto");
 				Class.forName(driver);
 
-				// Hibernate settings equivalent to hibernate.cfg.xml's properties
 				Properties settings = new Properties();
 				settings.put(Environment.DRIVER, driver);
 				settings.put(Environment.URL, url);
@@ -63,7 +62,6 @@ public class HibernateUtility {
 				sessionFactory = configuration.buildSessionFactory(registry);
 
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 				if (registry != null) {
 					StandardServiceRegistryBuilder.destroy(registry);
@@ -74,7 +72,6 @@ public class HibernateUtility {
 				try {
 					propertiesInputStream.close();
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}

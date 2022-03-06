@@ -27,7 +27,7 @@
 			<h1 class="display-4" align="left">Sign in</h1>
 			<br />
 			<div class="container">
-				<form action="register" method="post" class="justify-content-center">
+				<form action="login" method="post" class="justify-content-center">
 					<div class="container w-25">
 						<div class="row mb-3">
 							<label for="username">Username</label>

@@ -34,16 +34,6 @@ public class LogoutServlet extends HttpServlet {
 			session.removeAttribute("user");
 		
 		session.invalidate();
-//		Cookie cookies[] = req.getCookies();
-//		if(cookies != null) {
-//			for(Cookie cookie: cookies) {
-//				if(cookie.getName().equals("JSESSIONID")) {
-//					cookie.setMaxAge(0);
-//					((HttpServletResponse)response).addCookie(cookie);
-//					break;
-//				}
-//			}
-//		}
 		response.sendRedirect("index.jsp");
 	}
 

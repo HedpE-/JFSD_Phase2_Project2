@@ -65,7 +65,7 @@
 						<div class="col-md-6">
 							<label for="email">Email</label> <input type="email"
 								class="form-control" id="email"
-								value="${booking.getUser().getEmail(}" disabled readonly>
+								value="${booking.getUser().getEmail()}" disabled readonly>
 						</div>
 					</div>
 
