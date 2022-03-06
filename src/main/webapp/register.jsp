@@ -77,32 +77,5 @@
 			</p>
 		</div>
 	</div>
-	<jsp:include page="footer.html" />
-	<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-		<div id="adminToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-			<div class="toast-header">
-				<img src="..." class="rounded me-2" alt="...">
-				<strong class="me-auto">FlyAway</strong>
-				<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-			</div>
-			<div class="toast-body">
-				Your Admin request has been approved.
-			</div>
-		</div>
-	</div>
-    <script>
-		let toastTrigger = document.getElementById('complete-registration');
-		let toastLiveExample = document.getElementById('adminToast');
-		if (toastTrigger) {
-			toastTrigger.addEventListener('click', function () {
-				let adminRequest = document.getElementById('admin_request').getState();
-				if(adminRequest) {
-					let toast = new bootstrap.Toast(toastLiveExample);
-					
-					toast.show();
-				}
-			})
-		}
-    </script>
 </body>
 </html>
