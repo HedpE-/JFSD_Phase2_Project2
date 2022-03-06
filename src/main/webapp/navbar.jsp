@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -67,8 +66,8 @@
 				</c:when>
 				<c:otherwise>
 					<form class='form-inline my-2' action='login' method='post'>
-						<input class='form-control mr-sm-2' type='text' name='username' placeholder='Username' aria-label='Username'>
-						<input class='form-control mr-sm-2' type='password' name='password' placeholder='Password' aria-label='Password'>
+						<input class='form-control mr-sm-2' type='text' name='username' placeholder='Username' aria-label='Username' required>
+						<input class='form-control mr-sm-2' type='password' name='password' placeholder='Password' aria-label='Password' required>
 						<button class='btn btn-outline-success my-2 my-sm-0' type='submit'>Login</button>
 					</form>
 					<c:if test="<%=!request.getRequestURI().contains(\"register.jsp\")%>">

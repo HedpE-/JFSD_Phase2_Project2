@@ -5,10 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Fly Away Agency</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Font Awesome 5 Iconic Font -->
-<link rel="stylesheet" href="/path/to/cdn/fontawesome.min.css" />
 <!-- jQuery Library -->
 <script src="/path/to/cdn/jquery.slim.min.js"></script>
 <link rel="stylesheet"
@@ -23,6 +20,7 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
 	integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
 	crossorigin="anonymous"></script>
+<title>Fly Away Agency</title>
 </head>
 <body>
 	<jsp:include page="navbar.jsp" />
@@ -36,35 +34,37 @@
 				<br />find the travel of your dreams!
 			</h1>
 			<form class="needs-validation" action="findTravel">
-				<div class="row mb-3">
-					<div class="col-md-6">
-						<label for="start_date" class="form-label">Depart Date</label>
-						<input type="date" class="form-control" id="start_date" name="start_date">
+				<div class="container w-75">
+					<div class="row mb-3">
+						<div class="col-md-6">
+							<label for="start_date" class="form-label">Depart Date</label>
+							<input type="date" class="form-control" id="start_date" name="start_date">
+						</div>
+						<div class="col-md-6">
+							<label for="end_date" class="form-label">Arrival Date</label>
+							<input type="date" class="form-control" id="end_date" name="end_date">
+						</div>
 					</div>
-					<div class="col-md-6">
-						<label for="end_date" class="form-label">Arrival Date</label>
-						<input type="date" class="form-control" id="end_date" name="end_date">
-					</div>
-				</div>
-				<div class="row mb-3">
-					<c:set var="places" scope="page" value="${sessionScope.crud.getPlaces()}"/>
-					<div class="col-md-6">
-						<label for="source" class="form-label">Source</label>
-						<select class="form-control custom-select" id="source" name="source">
-						    <option value="-1" selected>Where do you come from?</option>
-						    <c:forEach var="place" items="${places}">
-							    <option value="${place.getId()}">${place.getName()}</option>
-						    </c:forEach>
-					  	</select>
-					</div>
-					<div class="col-md-6">
-						<label for="destination" class="form-label">Destination</label>
-						<select class="form-control custom-select" id="destination" name="destination">
-						    <option value="-1" selected>Where do you want to go?</option>
-						    <c:forEach var="place" items="${places}">
-							    <option value="${place.getId()}">${place.getName()}</option>
-						    </c:forEach>
-					  	</select>
+					<div class="row mb-3">
+						<c:set var="places" scope="page" value="${sessionScope.crud.getPlaces()}"/>
+						<div class="col-md-6">
+							<label for="source" class="form-label">Source</label>
+							<select class="form-control custom-select" id="source" name="source">
+							    <option value="-1" selected>Where do you come from?</option>
+							    <c:forEach var="place" items="${places}">
+								    <option value="${place.getId()}">${place.getName()}</option>
+							    </c:forEach>
+						  	</select>
+						</div>
+						<div class="col-md-6">
+							<label for="destination" class="form-label">Destination</label>
+							<select class="form-control custom-select" id="destination" name="destination">
+							    <option value="-1" selected>Where do you want to go?</option>
+							    <c:forEach var="place" items="${places}">
+								    <option value="${place.getId()}">${place.getName()}</option>
+							    </c:forEach>
+						  	</select>
+						</div>
 					</div>
 				</div>
 				<div class="col text-center w-100 mt-5">

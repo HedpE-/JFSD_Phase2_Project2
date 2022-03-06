@@ -7,8 +7,6 @@
 <meta charset="utf-8">
 <title>Checkout</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Font Awesome 5 Iconic Font -->
-<link rel="stylesheet" href="/path/to/cdn/fontawesome.min.css" />
 <!-- jQuery Library -->
 <script src="/path/to/cdn/jquery.slim.min.js"></script>
 <link rel="stylesheet"

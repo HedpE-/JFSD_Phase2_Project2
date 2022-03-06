@@ -32,7 +32,6 @@
                 <div class="modal-body">
                     <p>You are about to delete an entry from ${view} database, this procedure is irreversible.</p>
                     <p>Do you want to proceed?</p>
-                    <p class="debug-url"></p>
                 </div>
                 
                 <div class="modal-footer">
@@ -45,8 +44,6 @@
     <script>
         $('#confirm-delete').on('show.bs.modal', function(e) {
             $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
-            
-            $('.debug-url').html('Delete URL: <strong>' + $(this).find('.btn-ok').attr('href') + '</strong>');
         });
     </script>
 </body>

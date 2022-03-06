@@ -5,10 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Congratulations</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Font Awesome 5 Iconic Font -->
-<link rel="stylesheet" href="/path/to/cdn/fontawesome.min.css" />
 <!-- jQuery Library -->
 <script src="/path/to/cdn/jquery.slim.min.js"></script>
 <link rel="stylesheet"
@@ -23,10 +20,11 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
 	integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
 	crossorigin="anonymous"></script>
+<title>Congratulations</title>
 </head>
 <body>
 	<jsp:include page="navbar.jsp" />
-	<div class="container mt-5" style="max-width: 900px;">
+	<div class="container mt-5 w-50">
 		<div class="jumbotron text-center">
 			<h1 class="display-4">Congratulations for your purchase</h1>
 			<p class="lead">

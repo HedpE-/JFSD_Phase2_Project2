@@ -6,8 +6,6 @@
 <head>
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Font Awesome 5 Iconic Font -->
-<link rel="stylesheet" href="/path/to/cdn/fontawesome.min.css" />
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
 	integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
@@ -28,24 +26,26 @@
 		<div class="jumbotron">
 			<h1 class="display-4" align="left">Sign in</h1>
 			<br />
-			<div class="container w-25">
+			<div class="container">
 				<form action="register" method="post" class="justify-content-center">
-					<div class="row mb-3">
-						<label for="username">Username</label>
-						<input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
-					</div>
-					<div class="row mb-4">
-						<label for="password">Password</label>
-						<input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
-					</div>
-					<c:if test="${param.redirect ne null && param.redirect != ''}">
-						<input type="hidden" name="redirect" value="${param.redirect}">
-					</c:if>
-					<div class="form-group w-100 text-center">
-						<button type="submit" class="btn btn-primary w-75">Sign in</button>
+					<div class="container w-25">
+						<div class="row mb-3">
+							<label for="username">Username</label>
+							<input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+						</div>
+						<div class="row mb-4">
+							<label for="password">Password</label>
+							<input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+						</div>
+						<c:if test="${param.redirect ne null && param.redirect != ''}">
+							<input type="hidden" name="redirect" value="${param.redirect}">
+						</c:if>
+						<div class="form-group w-100 text-center">
+							<button type="submit" class="btn btn-primary w-75">Sign in</button>
+						</div> 
 					</div> 
 				</form>
-				<p class="text-center">Don't have an account?
+				<p class="text-center w-100">Don't have an account?
 					<a href="register.jsp<%String redirect = request.getParameter("redirect"); if(redirect != null && redirect != "") out.print("?redirect=" + redirect);%>">Register</a>
 				</p> 
 			</div>

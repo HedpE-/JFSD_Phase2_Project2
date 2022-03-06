@@ -34,6 +34,7 @@ public class RegisterServlet extends HttpServlet {
 		String lname=request.getParameter("lname");
 		String uname=request.getParameter("uname");
 		String email=request.getParameter("email");
+		boolean admin_request=request.getParameter("admin_request") != null;
 
 		String password=request.getParameter("password");
 		String rpassword=request.getParameter("rpassword");
@@ -48,7 +49,7 @@ public class RegisterServlet extends HttpServlet {
 			if(password.equals(rpassword))	{
 				CrudHelper crud = (CrudHelper)request.getSession().getAttribute("crud");
 				try {
-					crud.registerUser(new User(uname, fname, lname, email, password));
+					crud.registerUser(new User(uname, fname, lname, email, password, admin_request ? "admin" : "customer"));
 					String dispatch = "login?username="+uname+"&password="+password;
 					if(redirect != null && redirect != "")
 						dispatch += "&redirect=" + redirect;

@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>jfsd.assessments.phase2</groupId>
-	<artifactId>FlyAway</artifactId>
+	<artifactId>JFSD_Phase2_Project2_FlyAway</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>FlyAway Maven Webapp</name>
